@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <link rel = "stylesheet" type = "text/css" href = "play.css">
+    </head>
+
+<body>
+
+    <header>
+        <button class = "play"><a href = "index.html">EXIT</a></button>
+    </header>
+  <main id="game-container">
+
+    <section id="category-screen" class="screen" >
+    
+      <h2>Choose a Category:</h2>
+              <div class = "container">
+            <div class="card">
+                <div class="imgBx">
+                    <i class='bx  bxs-movie'  ></i> 
+                </div>
+                <div class="content">
+                    <h1>Film</h1>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBx">
+                    <i class='bx  bxs-music'  ></i> 
+                </div>
+                <div class="content">
+                    <h1>Music</h1>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBx">
+                    <i class='bx  bxs-joystick'  ></i> 
+                </div>
+                <div class="content">
+                    <h1>Games</h1>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBx">
+                    <i class='bx  bxs-hourglass'  ></i> 
+                </div>
+                <div class="content">
+                    <h1>History</h1>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBx">
+                    <i class='bx  bxs-globe'  ></i> 
+                </div>
+                <div class="content">
+                    <h1>Geography</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screen 2: Game Screen -->
+    <section id="quiz-screen" class="screen" style = "display: none;">
+        
+      <div id="question-box">
+        <h2 id="number">Question #1</h2>
+        <h3 id="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+            incididunt ut labore et dolore magna aliqua? </h3>
+        <div id="choices">
+            <button id = "choice1">A. Lorem Ipsum</button>
+            <button id = "choice2">B. Lorem Ipsum</button>
+            <button id = "choice3">C. Lorem Ipsum</button>
+            <button id = "choice4">D. Lorem Ipsum</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 3: End Screen -->
+    <section id="end-screen" class="screen" style="display: none;">
+      <h2>Game Over!</h2>
+      <p>Your score: <span id="final-score"></span>/10</p>
+      <button id="play-again" class="btn">Play Again</button>
+      <a href="index.html" class="btn">Back to Home</a>
+    </section>
+  </main>
+</body>
+</html>

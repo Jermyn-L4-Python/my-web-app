@@ -1,0 +1,164 @@
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+body{
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #0cc0df;
+  }
+
+header{
+    padding: 20px;
+}
+
+.play{
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 10px 20px 10px 20px;
+  background-color: #c1ff72;
+  font-size: 25px;
+  border-radius: 20px;
+  border: none;
+  text-align: right;
+}
+
+.play a{
+  color: #0cc0df;
+  text-decoration: none;
+  transition: ease 0.3s;
+}
+
+.play a:hover{
+  font-size: 35px;
+}
+
+h2{
+    font-size: 70px;
+    text-align: center;
+    color: #ceff90;
+}
+
+.container{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px;
+}
+
+.container .card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 300px;
+    height: 300px;
+    background-color: #c1ff72 ;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: 0.3s ease;
+}
+
+.imgBx{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+i{
+    font-size: 150px;
+    color: #26017c;
+}
+
+.container .card .content{
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    padding: 0 30px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.container .card .content h1{
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: #26017c;
+  font-weight: 700;
+}
+
+#question-box #number{
+    margin-top: -70px;
+    margin-bottom: 50px;
+}
+
+#question{
+    text-align: center;
+    font-size: 40px;
+    color: #26017c;
+}
+
+#choices{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 100px;
+}
+
+#choices button{
+    padding: 40px;
+    width: 500px;
+    font-size: 45px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#choices #choice1{
+    background-color: red;
+    color: white;
+}
+
+#choices #choice2{
+    background-color: #26017c;
+    color: white;
+}
+
+#choices #choice3{
+    background-color: #c1ff72;
+    color: white;
+}
+
+#choices #choice4{
+    background-color: greenyellow;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
