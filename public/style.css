@@ -40,6 +40,7 @@ body{
         }
 
         .input-box input{
+            color: white;
             width: 100%;
             height: 100%;
             background: transparent;
@@ -66,16 +67,6 @@ body{
             font-size: 20px;
         }
 
-        .login-container .remember{
-            color: #c1ff72;
-            font-size: 15px;
-            margin: -5px 0 15px ;
-            font-family: "Lilita One", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-
         .login-container .btn{
             background-color: #c1ff72;
             color: #26017c;
@@ -90,7 +81,7 @@ body{
             border-radius: 40px;
             box-shadow: 0 0 10px rgba (0, 0, 0, 1);
             cursor: pointer;
-            font-size: 25px;
+            font-size: 30px;
             font-weight: 600;
         }
 
@@ -116,6 +107,15 @@ body{
         }
 
 #errorMessage {
-    color: red;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    outline: none;
     margin-top: 10px;
+    text-align: center;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }

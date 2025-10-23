@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+         <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #0cc0df;
+        }
+
+        .wrapper{
+            width: 420px;
+            padding: 30px 40px;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, .2);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 10px rgba (0, 0, 0, .2);
+            border-radius: 20px;
+        }
+
+        .wrapper h1{
+            font-size: 50px;
+            color: #c1ff72;
+            text-align: center;
+            font-family: "Lilita One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .wrapper .input-box{
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 30px 0;
+            
+        }
+
+        .input-box input{
+            width: 100%;
+            height: 100%;
+            color: white;
+            background: transparent;
+            border: 2px solid white;
+            outline: none;
+            font-size: 16px;
+            border-radius: 40px;
+            padding: 20px;
+            font-family: "Lilita One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .input-box input::placeholder{
+            color: white;
+        }
+
+        .input-box i{
+            color: white;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+
+        .wrapper .remember{
+            color: #c1ff72;
+            font-size: 15px;
+            margin: -5px 0 15px ;
+            font-family: "Lilita One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        .wrapper .btn{
+            background-color: #c1ff72;
+            color: #26017c;
+            font-family: "Lilita One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            width: 100%;
+            margin: 10px 0 10px;
+            height: 45px;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba (0, 0, 0, 1);
+            cursor: pointer;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .wrapper .register-link{
+            color: #c1ff72;
+            font-family: "Lilita One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .register-link p a {
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+        }
+
+        .register-link p a:hover{
+            color: #26017c;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action = "">
+            <h1>REGISTER</h1>
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Name" id="name" required>
+                <i class='bx  bxs-user'  ></i> 
+            </div>
+            <div class="input-box">
+                <input type="text" name="email" placeholder="Email" id="email" required>
+                 <i class='bx  bxs-envelope'  ></i> 
+            </div>
+            <div class="input-box">
+                <input type="password" name="pass" placeholder="Password" id="password" required>
+                <i class='bx  bxs-lock'  ></i>  
+            </div>
+
+            <button type = "submit" class="btn">Register</button>
+            <div class="register-link">
+                <p>Already have an account? <a href="index.html">Sign in</a></p>
+            </div>
+            
+        </form>
+    </div>
+<script>
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const name = document.querySelector('input[name="username"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const password = document.querySelector('input[name="pass"]').value;
+
+    try {
+      const response = await fetch('/users/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, password })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert('✅ Registration successful!');
+        window.location.href = 'index.html';
+      } else {
+        alert('⚠️ ' + data.error);
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Something went wrong. Please try again.');
+    }
+  });
+</script>
+</body>
+</html>
