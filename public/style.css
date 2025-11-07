@@ -16,9 +16,8 @@ body{
             width: 420px;
             padding: 30px 40px;
             background: transparent;
-            border: 2px solid rgba(255, 255, 255, .2);
             backdrop-filter: blur(20px);
-            box-shadow: 0 0 10px rgba (0, 0, 0, .2);
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
             border-radius: 20px;
         }
 
@@ -68,6 +67,8 @@ body{
         }
 
         .login-container .btn{
+            position: relative;
+            display: inline-block;
             background-color: #c1ff72;
             color: #26017c;
             font-family: "Lilita One", sans-serif;
@@ -79,11 +80,42 @@ body{
             border: none;
             outline: none;
             border-radius: 40px;
-            box-shadow: 0 0 10px rgba (0, 0, 0, 1);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
             cursor: pointer;
             font-size: 30px;
             font-weight: 600;
+            z-index: 1;
         }
+
+        .login-container .btn:before{
+            transition: 0.5s ease;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+            opacity: 0;
+            content: "";
+            background-color: #26017c;
+            z-index: -1;
+        }
+
+        .login-container .btn:hover, .btn:focus{
+            color: #c1ff72;
+        }
+
+        .login-container .btn:hover:before, .btn:focus:before{
+            transition: 0.5s all ease;
+            left: 0;
+            right: 0;
+            opacity: 1;
+            border-radius: 40px;
+        }
+
+        .login-container .btn:active{
+            transform: scale(0.10);
+        }
+
 
         .login-container .register-link{
             color: #c1ff72;
@@ -118,4 +150,11 @@ body{
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+@media screen and (max-width: 576px){
+    .login-container{
+        width: 350px;
+        padding: 25px 35px;
+    }
 }

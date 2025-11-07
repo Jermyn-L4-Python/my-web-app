@@ -62,8 +62,20 @@ h2{
     height: 300px;
     background-color: #c1ff72 ;
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    transition: 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    transition: 0.5s ease;
+}
+
+.container .card:hover{
+    background-color: #26017c;
+}
+
+.container .card:hover i{
+    color: #c1ff72;
+}
+
+.container .card:hover .content h1{
+    color: #c1ff72;
 }
 
 .imgBx{
@@ -76,26 +88,29 @@ h2{
 i{
     font-size: 150px;
     color: #26017c;
+    transition: 0.5s ease;
 }
 
 .container .card .content{
     position: absolute;
-    top: 250px;
+    top: 230px;
     width: 100%;
     padding: 0 30px;
     overflow: hidden;
     text-align: center;
-    transition: 0.5s;
+    transition: 0.5s ease;
 }
 
 .container .card .content h1{
   font-family: "Lilita One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 30px;
+  font-size: 40px;
   color: #26017c;
   font-weight: 700;
 }
+
+
 
 #question-box #number{
     margin-top: -70px;
