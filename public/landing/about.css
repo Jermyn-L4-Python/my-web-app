@@ -47,7 +47,7 @@ header {
 }
 
 .navbar a:hover {
-  background-color: #0cc0df;
+  background-color: #26017c;
   color: #ceff90;
 }
 
@@ -62,6 +62,7 @@ header {
   font-size: 25px;
   border-radius: 20px;
   border: none;
+  transition: ease 0.3s;
 }
 
 .play a{
@@ -70,7 +71,11 @@ header {
   transition: ease 0.3s;
 }
 
-.play a:hover{
+.play:hover{
+  background-color: #26017c;
+}
+
+.play:hover a{
   font-size: 35px;
 }
 
@@ -114,6 +119,7 @@ header {
 
 .content h1{
   margin-top: -200px;
+  text-shadow: 2px 2px 0 #26017c, 2px -2px 0 #26017c, -2px 2px 0 #26017c, -2px -2px 0 #26017c, 2px 0px 0 #26017c, 0px 2px 0 #26017c, -2px 0px 0 #26017c, 0px -2px 0 #26017c;
 }
 
 
@@ -183,6 +189,7 @@ header {
   margin-top: 20px;
   margin-bottom: 100px;
   color: #ceff90;
+  text-shadow: 2px 2px 0 #26017c, 2px -2px 0 #26017c, -2px 2px 0 #26017c, -2px -2px 0 #26017c, 2px 0px 0 #26017c, 0px 2px 0 #26017c, -2px 0px 0 #26017c, 0px -2px 0 #26017c;
 }
 
 .steps {
@@ -213,9 +220,14 @@ header {
   padding: 0.80rem 1.5rem;
 }
 
+.step:hover i{
+  font-size: 75px;
+}
+
 .step i {
   font-size: 70px;
   color: #0cc0df;
+  transition: 0.2s ease;
 }
 
 .button2{
@@ -286,7 +298,7 @@ header {
     font-style: normal;
     background-color: #c1ff72;
     padding: 50px;
-    color: #0cc0df;
+    color: #26017c;
   }
 
   .footer-container {
@@ -319,7 +331,7 @@ header {
   .footer-section p,
   .footer-section a {
     font-size: 30px;
-    color: #0cc0df;
+    color: #26017c;
     text-decoration: none;
     display: block;
     margin: 4px 0;
@@ -360,10 +372,6 @@ header {
   }
 
   .icon a{
-    color: #0cc0df;
-    transition: 0.2s ease;
-  }
-
-  .icon a:hover{
     color: #26017c;
+    transition: 0.2s ease;
   }

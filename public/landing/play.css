@@ -25,6 +25,16 @@ header{
   border-radius: 20px;
   border: none;
   text-align: right;
+  transition: ease 0.3s;
+}
+
+.play:hover{
+    background-color: #26017c;
+}
+
+.play:hover a{
+    font-size: 30px;
+  color: #c1ff72;
 }
 
 .play a{
@@ -33,14 +43,11 @@ header{
   transition: ease 0.3s;
 }
 
-.play a:hover{
-  font-size: 35px;
-}
-
 h2{
     font-size: 70px;
     text-align: center;
     color: #ceff90;
+    text-shadow: 2px 2px 0 #26017c, 2px -2px 0 #26017c, -2px 2px 0 #26017c, -2px -2px 0 #26017c, 2px 0px 0 #26017c, 0px 2px 0 #26017c, -2px 0px 0 #26017c, 0px -2px 0 #26017c;
 }
 
 .container{

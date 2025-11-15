@@ -1,4 +1,4 @@
- *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -108,12 +108,13 @@ header {
 .content {
   z-index: 1;
   font-size: 100px;
-  color: #ceff90;
+  color: #c1ff72;
   margin: auto;
 }
 
 .content h1{
   margin-top: -200px;
+  text-shadow: 2px 2px 0 #26017c, 2px -2px 0 #26017c, -2px 2px 0 #26017c, -2px -2px 0 #26017c, 2px 0px 0 #26017c, 0px 2px 0 #26017c, -2px 0px 0 #26017c, 0px -2px 0 #26017c;
 }
 
 
@@ -161,6 +162,7 @@ header {
   margin-top: 20px;
   margin-bottom: 100px;
   color: #0cc0df;
+  text-shadow: 2px 2px 0 #26017c, 2px -2px 0 #26017c, -2px 2px 0 #26017c, -2px -2px 0 #26017c, 2px 0px 0 #26017c, 0px 2px 0 #26017c, -2px 0px 0 #26017c, 0px -2px 0 #26017c;
 }
 
 .steps {
@@ -191,9 +193,19 @@ header {
   padding: 0.85rem 1.5rem;
 }
 
+.step:hover i{
+  font-size: 80px;
+}
+
 .step i {
   font-size: 70px;
   color: #c1ff72;
+  transition: 0.2s ease;
+}
+
+.step:hover .button2{
+  padding: 25px;
+  font-size: 35px;
 }
 
 .button2{
@@ -210,6 +222,7 @@ header {
   font-size: 30px;
   justify-content: center;
   align-items: center;
+  transition: 0.2s ease;
 }
 
 .sec-page .wave2 {
@@ -385,8 +398,3 @@ header {
   }
 }
 
-@media screen and (max-width: 768px){
-  .logo img{
-    width: 200px;
-  }
-}
